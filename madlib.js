@@ -9,9 +9,9 @@ console.log("1. The Snail's Tale")
 console.log("2. The Neighbor Next Door");
 console.log("3. Presidential Speech")
 
-let user = prompt("Choice:");
+let user = prompt("Choice:"); //Choose story
 
-let name = prompt("Enter a name:")?.trim();
+let name = prompt("Enter a name:")?.trim(); //Trims whitespace
 let place1 = prompt("Enter a place:")?.trim();
 let place2 = prompt("Enter another place:")?.trim();
 let adjective = prompt("Enter an adjective:")?.trim();
@@ -38,14 +38,43 @@ as they continue ${verbWithIng} towards my vision. Thank you!`
 
 console.log("\nThe Mad Lib:");
 
+//Shows story based on user input
 if(user == 1){
     console.log(story1);
+
+    let searchWord = prompt("Enter a word to search for:");
+    if(story1.indexOf(searchWord) == -1){
+        console.log("Word not found.")
+    }
+    else{
+        console.log(`First Index occurrence: ${story1.indexOf(searchWord)}`);
+        console.log(`Last Index occurrence: ${story1.lastIndexOf(searchWord)}`);
+    }
+    
 }
 else if(user ==2){
     console.log(story2);
+
+    let searchWord = prompt("Enter a word to search for:");
+    if(story2.indexOf(searchWord) == -1){
+        console.log("Word not found.")
+    }
+    else{
+        console.log(`First Index occurrence: ${story2.indexOf(searchWord)}`);
+        console.log(`Last Index occurrence: ${story2.lastIndexOf(searchWord)}`);
+    }
 }
 else if(user == 3){
     console.log(story3)
+
+    let searchWord = prompt("Enter a word to search for:");
+    if(story3.indexOf(searchWord) == -1){
+        console.log("Word not found.")
+    }
+    else{
+        console.log(`First Index occurrence: ${story3.indexOf(searchWord)}`);
+        console.log(`Last Index occurrence: ${story3.lastIndexOf(searchWord)}`);
+    }
 }
 else{
     console.log("Invalid");
