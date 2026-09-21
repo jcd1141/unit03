@@ -2,7 +2,7 @@
 //IT 505
 //Unit 3
 
-const API_KEY = "DEMO_KEY";
+const API_KEY = "DEMO_KEY"; //Nasa public API key
 
 console.log("Welcome to the NASA Explorer!");
 
@@ -11,9 +11,9 @@ console.log("1. Astronomy Picture of the Day");
 console.log("2. Near-Earth Asteroids by Date");
 console.log("3. Exit");
 
-let user = prompt("Choice:");
+let user = prompt("Choice:"); //Prompts the user to enter a choice from menu
 
-if(user == 1){
+if(user == 1){ //If choice is 1, fetches NASA's picture of the day
     const response = await fetch(
         `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`
     );
@@ -24,7 +24,7 @@ if(user == 1){
     console.log(`Date: ${data.date}`);
     console.log(`Explanation: ${data.explanation}`);
 }
-else if(user == 2){
+else if(user == 2){ //If choice is 2, finds number of asteroids near earth on certain dates
     let date = prompt("Enter a date (YYYY-MM-DD):");
 
     const response = await fetch(
