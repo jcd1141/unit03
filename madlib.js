@@ -11,6 +11,7 @@ console.log("3. Presidential Speech")
 
 let user = prompt("Choice:"); //Choose story
 
+//word prompts
 let name = prompt("Enter a name:")?.trim(); //Trims whitespace
 let place1 = prompt("Enter a place:")?.trim();
 let place2 = prompt("Enter another place:")?.trim();
@@ -19,6 +20,7 @@ let noun = prompt("Enter a noun:")?.trim();
 let verb = prompt("Enter a verb:")?.trim();
 let verbWithIng = prompt("Enter a verb ending in -ing:")?.trim();
 
+//Stories are template literals, gets rid of abudant concatenation
 let story1 = `Once a snail by the name of ${name} decided it was time for a change. 
 In the middle of ${place1}, he stood, eager to hit the ground ${verbWithIng}.
 His snail life bored him, his shell had become ${adjective}, and his old mushroom home
@@ -43,7 +45,7 @@ if(user == 1){
     console.log(story1);
 
     let searchWord = prompt("Enter a word to search for:");
-    if(story1.indexOf(searchWord) == -1){
+    if(story1.indexOf(searchWord) == -1){ //if word not found, returns -1. Prints word not found.
         console.log("Word not found.")
     }
     else{
@@ -77,5 +79,5 @@ else if(user == 3){
     }
 }
 else{
-    console.log("Invalid");
+    console.log("Invalid"); //If user enters invalid option
 }
